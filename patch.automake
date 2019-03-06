@@ -1,0 +1,12 @@
+--- automake.in
++++ automake.in
+@@ -3872,7 +3872,7 @@
+ sub substitute_ac_subst_variables
+ {
+   my ($text) = @_;
+-  $text =~ s/\${([^ \t=:+{}]+)}/substitute_ac_subst_variables_worker ($1)/ge;
++  $text =~ s/\$\{([^ \t=:+{}]+)\}/substitute_ac_subst_variables_worker ($1)/ge;
+   return $text;
+ }
+
+/
