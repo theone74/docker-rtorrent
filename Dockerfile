@@ -35,7 +35,9 @@ RUN \
 	rm rtorrent-0.9.7.tar.gz && \
 	rm libtorrent-0.13.7.tar.gz && \
 	rm automake-1.14.1.tar.gz && \
-	apk del git build-base autoconf linux-headers  libsigc++-dev curl-dev
+	apk del git build-base autoconf linux-headers  libsigc++-dev curl-dev && \
+	sed -i '/http:\/\/dl\-cdn\.alpinelinux\.org\/alpine\/v3\.3\/main\//d' /etc/apk/repositories && \
+	apk update && apk stats
 	# apk del git build-base zlib-dev openssl-dev autoconf linux-headers libsigc++-dev curl-dev
 
 
