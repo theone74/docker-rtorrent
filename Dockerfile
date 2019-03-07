@@ -11,7 +11,7 @@ RUN \
 	tar zxf automake-1.14.1.tar.gz && \
 	cd automake-1.14.1/ && \
 	./configure --prefix=/usr && \
-	cd bin && patch < ../../patch.automake && cat automake.in && cd .. && \
+	cd bin && patch < ../../patch.automake && cd .. && \
 	make -j6 &&\
 	make install && \
 	cd .. && \
